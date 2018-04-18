@@ -123,6 +123,8 @@ func NewClient(o *ClientOptions) Client {
 	switch c.options.ProtocolVersion {
 	case 3, 4:
 		c.options.protocolVersionExplicit = true
+	case 0x83, 0x84:
+		c.options.protocolVersionExplicit = true
 	default:
 		c.options.ProtocolVersion = 4
 		c.options.protocolVersionExplicit = false
@@ -220,6 +222,14 @@ func (c *client) Connect() Token {
 					DEBUG.Println(CLI, "Using MQTT 3.1 protocol")
 					cm.ProtocolName = "MQIsdp"
 					cm.ProtocolVersion = 3
+				case 0x83:
+					DEBUG.Println(CLI, "Using MQTT 3.1b protocol")
+					cm.ProtocolName = "MQIsdp"
+					cm.ProtocolVersion = 0x83
+				case 0x84:
+					DEBUG.Println(CLI, "Using MQTT 3.1.1b protocol")
+					cm.ProtocolName = "MQTT"
+					cm.ProtocolVersion = 0x84
 				default:
 					DEBUG.Println(CLI, "Using MQTT 3.1.1 protocol")
 					c.options.ProtocolVersion = 4
@@ -324,6 +334,14 @@ func (c *client) reconnect() {
 			if err == nil {
 				DEBUG.Println(CLI, "socket connected to broker")
 				switch c.options.ProtocolVersion {
+				case 0x83:
+					DEBUG.Println(CLI, "Using MQTT 3.1b protocol")
+					cm.ProtocolName = "MQIsdp"
+					cm.ProtocolVersion = 0x83
+				case 0x84:
+					DEBUG.Println(CLI, "Using MQTT 3.1.1b protocol")
+					cm.ProtocolName = "MQTT"
+					cm.ProtocolVersion = 0x84
 				case 3:
 					DEBUG.Println(CLI, "Using MQTT 3.1 protocol")
 					cm.ProtocolName = "MQIsdp"
