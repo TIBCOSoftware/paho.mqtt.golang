@@ -1,0 +1,3 @@
+REVIEWBOARD_URL="https://scr.tibco.com/messaging"
+REPOSITORY = "git-messaging-eclipse-paho-mqtt-golang"
+BRANCH = "tibco-trunk"
