@@ -12,6 +12,8 @@
  *    Mike Robertson
  */
 
+// Portions copyright © 2018 TIBCO Software Inc.
+
 // Package mqtt provides an MQTT v3.1.1 client library.
 package mqtt
 

@@ -12,6 +12,8 @@
  *    Mike Robertson
  */
 
+// Portions copyright © 2018 TIBCO Software Inc.
+
 package mqtt
 
 import (
