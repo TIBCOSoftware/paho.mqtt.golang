@@ -2,6 +2,21 @@
 [![GoDoc](https://godoc.org/github.com/eclipse/paho.mqtt.golang?status.svg)](https://godoc.org/github.com/eclipse/paho.mqtt.golang)
 [![Go Report Card](https://goreportcard.com/badge/github.com/eclipse/paho.mqtt.golang)](https://goreportcard.com/report/github.com/eclipse/paho.mqtt.golang)
 
+TIBCO Usage of the Eclipse Paho MQTT Go client
+===========================
+
+
+This fork of the Eclipse Paho MQTT Go client code is maintained as a mirror of the upstream project to document our actual usage.
+
+This code has been modified by TIBCO for use in its MQTT applications.
+
+Any modifications from the upstream should be considered temporary, as they will be submitted as pull requests to the upstream project.  A process that generally involves subsequent modifications to the original request to make it more usable by a broader audience.
+
+MQTT Go client users are encouraged to work directly with the primary project : [Eclipse Paho](http://eclipse.org/paho)
+
+In addition to the standard upstream branches, this repo contains a tibco-release branch maintained to document TIBCO releases.
+
+
 Eclipse Paho MQTT Go client
 ===========================
 
